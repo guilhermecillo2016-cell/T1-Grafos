@@ -1,0 +1,5 @@
+*vertices 2
+1 rotulo_de_1
+2 rotulo_de_2
+*edges
+1 2 7
