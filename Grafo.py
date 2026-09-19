@@ -49,7 +49,3 @@ class Grafo_nao_dirigido_ponderado:
             return self.arestas[(vertice1, vertice2)]
         else:
             return None
-grafo = Grafo_nao_dirigido_ponderado()
-grafo.ler_arquivo('blabla.txt')
-print(grafo.rotulo(1))
-print(grafo.vizinhos(1))
