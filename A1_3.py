@@ -25,12 +25,10 @@ def BuscaCicloEuleriano(arquivo : str):
         else:
             ciclo.append(caminhoAtual.pop())
     
-    for i in range(len(ciclo)):
-        ciclo[i] = str(ciclo[i])
     if ciclo:
         print("1")
-        print(",".join(ciclo))
+        print(",".join(map(str, ciclo)))
     else:
         print("0")
 
-ans = BuscaCicloEuleriano("teste1.txt")
+BuscaCicloEuleriano("teste1.txt")
