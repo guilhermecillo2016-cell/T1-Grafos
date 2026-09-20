@@ -49,7 +49,9 @@ class Grafo_nao_dirigido_ponderado:
     def ha_aresta(self, vertice1, vertice2):
         return (vertice1, vertice2) in self.arestas or (vertice2, vertice1) in self.arestas
     def peso(self, vertice1, vertice2):
-        if self.ha_aresta(vertice1, vertice2):
+        if (vertice1, vertice2) in self.arestas:
             return self.arestas[(vertice1, vertice2)]
+        elif (vertice2, vertice1) in self.arestas:
+            return self.arestas[(vertice2, vertice1)]
         else:
-            return sys.float_info.max  # Retorna um valor muito grande se não houver aresta
+            return sys.float_info.max
