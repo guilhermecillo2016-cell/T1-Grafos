@@ -1,4 +1,5 @@
-from Grafo import Grafo_nao_dirigido_ponderado
+from A1_1 import Grafo_nao_dirigido_ponderado
+import sys
 """
 Este programa verifica se há um Ciclo Euleriano no Grafo. A função deve receber o grafo como argumento.
 Deve retornar 1 na primeira linha se houver ciclo e 0 caso contrário. Além disso, deve retornar o caminho
@@ -25,10 +26,12 @@ def BuscaCicloEuleriano(arquivo : str):
         else:
             ciclo.append(caminhoAtual.pop())
     
-    if ciclo:
+    for i in range(len(ciclo)):
+        ciclo[i] = str(ciclo[i])
+    if ciclo[-1] == ciclo[0] and len(ciclo) > 1:
         print("1")
-        print(",".join(map(str, ciclo)))
+        print(",".join(ciclo))
     else:
         print("0")
 
-BuscaCicloEuleriano("teste1.txt")
+BuscaCicloEuleriano(sys.argv[1])

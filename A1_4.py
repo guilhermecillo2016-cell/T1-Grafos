@@ -1,5 +1,5 @@
-from Grafo import Grafo_nao_dirigido_ponderado
-
+from A1_1 import Grafo_nao_dirigido_ponderado
+import sys
 INF = float('inf')
 
 
@@ -50,4 +50,4 @@ def bellman_ford(arquivo: str, s: int):
         print(f"{vertice}: {','.join(map(str, caminho))}; d={int(D[vertice])}")
 
 
-bellman_ford("teste.txt", 1)
+bellman_ford(sys.argv[1], int(sys.argv[2]))

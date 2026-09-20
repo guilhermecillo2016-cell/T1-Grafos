@@ -1,4 +1,5 @@
-from Grafo import Grafo_nao_dirigido_ponderado
+from A1_1 import Grafo_nao_dirigido_ponderado
+import sys
 from collections import deque, defaultdict
 
 def busca_em_largura(arquivo, vertice_inicial):
@@ -23,4 +24,4 @@ def busca_em_largura(arquivo, vertice_inicial):
                 print(f"{niveis[key][i]},", end='')
             else:
                 print(f"{niveis[key][i]}")
-busca_em_largura("teste.txt", 1)
+busca_em_largura(sys.argv[1], int(sys.argv[2]))
