@@ -17,7 +17,7 @@ def ordenacao_topologica(grafo: Grafo) -> list:
     return O
 
 def DFS_visit_OT(grafo: Grafo, vertice: int, visitados: set, T: dict, F: dict, tempo: int, O: list) -> int:
-    visitados.add(vertice)  # Correção: set usa .add()
+    visitados.add(vertice)  
     tempo += 1
     T[vertice] = tempo
     
