@@ -16,7 +16,7 @@ class Grafo:
             if not self.dirigido:
                 self.vizinhanca[vertice2].append(vertice1)
     def ler_arquivo(self, nome_arquivo):
-        with open(nome_arquivo, 'r') as arquivo:
+        with open(nome_arquivo, 'r', encoding='utf-8') as arquivo:
             linhas = arquivo.read().strip().split('\n')
             
             lendo_vertices = False
