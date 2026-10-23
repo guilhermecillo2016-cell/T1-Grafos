@@ -1,4 +1,4 @@
-from A1_1 import Grafo_nao_dirigido_ponderado
+from A1.A1_1 import Grafo_nao_dirigido_ponderado
 import sys
 """
 Este programa verifica se há um Ciclo Euleriano no Grafo. A função deve receber o grafo como argumento.

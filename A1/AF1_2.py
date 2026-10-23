@@ -1,5 +1,5 @@
 import sys
-from A1_1 import Grafo_nao_dirigido_ponderado
+from A1.A1_1 import Grafo_nao_dirigido_ponderado
 def busca_em_largura(grafo, vertice_inicial):
     vizitados = set()
     vizitados.add(vertice_inicial)
