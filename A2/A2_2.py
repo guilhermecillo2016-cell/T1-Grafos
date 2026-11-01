@@ -11,7 +11,7 @@ def ordenacao_topologica(grafo: Grafo) -> list:
         if v not in visitados:
             DFS_visit_OT(grafo, v, visitados, O)
             
-    return O
+    return O[::-1]
 
 def DFS_visit_OT(grafo: Grafo, vertice: int, visitados: set, O: list):
     visitados.add(vertice)  
@@ -21,7 +21,7 @@ def DFS_visit_OT(grafo: Grafo, vertice: int, visitados: set, O: list):
             DFS_visit_OT(grafo, u, visitados, O)
     
     
-    O.insert(0, vertice) 
+    O.append(vertice) 
 
 if __name__ == "__main__":
     arquivo = sys.argv[1]
